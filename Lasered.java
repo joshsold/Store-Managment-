@@ -1,34 +1,64 @@
-/*
- * 
+/**
+  * Lasered class contains functions if user chooses a laser engraved card
  */
 public class Lasered {
-private double price = 49.99;
-private String material;
-private String text;
-private String bankingProvider;
 
-public Lasered(String text, String material, String bankingProvider){
-  this.text = text;
-  this.material = material;
-  this.bankingProvider = bankingProvider;
-}
+    // The price of the laser-engraved card
+    private double price = 49.99;
 
-  public String getText(){
-  return text;
+    // The material of the credit card (e.g., metal, plastic)
+    private String material;
+
+    // The text to be laser-engraved on the card
+    private String text;
+
+    // The banking provider associated with the card
+    private String bankingProvider;
+
+    /**
+     * Constructor to initialize a Lasered object with specified text, material, and banking provider
+     */
+    public Lasered(String text, String material, String bankingProvider) {
+        this.text = text;
+        this.material = material;
+        this.bankingProvider = bankingProvider;
+    }
+
+    /**
+     * Retrieves the engraved text on the card
+     */
+    public String getText() {
+        return text;
+    }
+
+    /**
+     * Retrieves the material of the card
+     */
+    public String getMaterial() {
+        return material;
+    }
+
+    /**
+     * Updates the material of the card
+     */
+    public void setMaterial(String newMaterial) {
+        material = newMaterial;
+    }
+
+    /**
+     * Updates the engraved text on the card.
+     */
+    public void setText(String newText) {
+        text = newText;
+    }
+
+    /**
+     * Provides a summary of the order details
+     */
+    public String toString() {
+        return "\nThank you for your purchase! You are ordering a " + material +
+               " credit card with the text \"" + text + "\" laser engraved.\n" +
+               "You selected " + bankingProvider + " as your banking provider.\n" +
+               "Your total is $" + price + ".\nEnjoy your new card!";
+    }
 }
-  public String getMaterial(){
-  return material;
-}
-  public void setMaterial(String newMaterial){
-   material = newMaterial; 
-  }
-  public void setText(String newText){
-  text = newText;
-  }
-  
-  public String toString() {
-  return "\n Thank you for your purchase! You are ordering a " + material + " credit card with the text " + text + " laser engraved.\n You selected " + 
-    bankingProvider + " as your banking provider.\n" + "Your total is " + price + ".\n Enjoy your new card!";
-}
-}
-  
